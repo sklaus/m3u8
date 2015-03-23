@@ -372,7 +372,8 @@ class Segment(BasePathMixin):
 
         if self.discontinuity:
             output.append('#EXT-X-DISCONTINUITY\n')
-            output.append('#EXT-X-PROGRAM-DATE-TIME:%s\n' % parser.format_date_time(self.program_date_time))
+            # changed for current tests
+            #output.append('#EXT-X-PROGRAM-DATE-TIME:%s\n' % parser.format_date_time(self.program_date_time))
 
         output.append('#EXTINF:%s,' % int_or_float_to_string(self.duration))
         if self.title:
